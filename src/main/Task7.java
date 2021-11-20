@@ -6,23 +6,23 @@ public class Task7 {
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        System.out.print("Введите N: ");
-        int N = in.nextInt();
-        System.out.print("Введите " + N + " элементов: ");
-        int[] array = new int[N];
-        for (int i = 0; i < N; i++) {
-            array[i] = in.nextInt();
+        System.out.print("Введите n: ");
+        int n = in.nextInt();
+        System.out.print("Введите " + n + " элементов: ");
+        double[] array = new double[n];
+        for (int i = 0; i < n; i++) {
+            array[i] = in.nextDouble();
         }
         System.out.println(Arrays.toString(array));
         array = shellSort(array);
         System.out.println(Arrays.toString(array));
     }
-    private static void swap(int[] array, int ind1, int ind2) {
-        int tmp = array[ind1];
+    private static void swap(double[] array, int ind1, int ind2) {
+        double tmp = array[ind1];
         array[ind1] = array[ind2];
         array[ind2] = tmp;
     }
-    public static int[] shellSort(int[] array){
+    public static double[] shellSort(double[] array){
         int gap = array.length / 2;
         while (gap >= 1) {
             for (int right = 0; right < array.length; right++) {
