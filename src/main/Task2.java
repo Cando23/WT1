@@ -1,3 +1,5 @@
+package main;
+
 public class Task2 {
     public static void main(String[] args) {
         var res = isInRegion(5,1);
